@@ -12,11 +12,19 @@ const humidityElement = document.querySelector("#humidity span");
 const windElement = document.querySelector("#wind span");
 
 const weatherContainer = document.querySelector("#weather-data");
+const loader = document.querySelector("#loader");
+
+const toggleLoader = () => {
+  loader.classList.toggle("hide");
+};
 
 const getWeatherData = async () => {
+  toggleLoader();
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&units=metric&lang=pt_br&appid=f45a3ebdec965165d3431688d5a0e736`;
   const res = await fetch(url);
   const data = await res.json();
+  
+  toggleLoader();
   return data;
 }
 
