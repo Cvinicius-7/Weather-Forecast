@@ -3,3 +3,23 @@
     margin: 0;
     font-family: "Ubuntu", sans-serif;
 }
+body{
+    background: linear-gradient(180deg, #b1d5ff 0%, #4b7ff0 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  
+    background-position: center;
+    background-size: cover;
+}
+.hide{
+    display: none;
+}
+.container{
+    background-color: #082cff;
+    box-shadow: rgba(0,0,0, 0.24) 0px 3px 0px;
+    padding: 2rem;
+    color:#fdfdfd;
+    border-radius: 1rem;
+}
