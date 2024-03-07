@@ -23,14 +23,14 @@ const getWeatherData = async () => {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&units=metric&lang=pt_br&appid=f45a3ebdec965165d3431688d5a0e736`;
   const res = await fetch(url);
   const data = await res.json();
-  
+
   toggleLoader();
   return data;
 }
 
 const showWeatherData = async () => {
   const data = await getWeatherData();
-  
+
   cityElement.innerText = data.name;
   tempElement.innerText = parseInt(data.main.temp);
   descElement.innerText = data.weather[0].description;
